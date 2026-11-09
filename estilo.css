@@ -1,0 +1,303 @@
+/* ========================================
+   1. VARIÁVEIS GLOBAIS
+======================================== */
+
+:root {
+    --terra: #9a4630;
+    --terra-esc: #7d3624;
+    --bg: #fff7f3;
+    --pessego: #fcebe1;
+    --tinta: #4a3a33;
+}
+
+/* ========================================
+   2. ESTILOS GERAIS
+======================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--tinta);
+    padding-top: 64px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--terra);
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-terra {
+    color: var(--terra) !important;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Acessibilidade: foco visível */
+:focus-visible {
+    outline: 3px solid var(--terra);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   3. MENU DE NAVEGAÇÃO
+======================================== */
+
+.navbar {
+    background: var(--bg);
+    border-bottom: 1px solid #f0dcd1;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    color: var(--tinta);
+}
+
+.nav-link:hover {
+    color: var(--terra);
+}
+
+/* ========================================
+   4. BOTÕES
+======================================== */
+
+.btn-terra {
+    background: var(--terra);
+    color: #fff;
+    border: 0;
+}
+
+.btn-terra:hover {
+    background: var(--terra-esc);
+    color: #fff;
+}
+
+.btn-outline-terra {
+    border: 1px solid #cfc0b8;
+    color: var(--tinta);
+    background: #fff;
+}
+
+.btn-outline-terra:hover {
+    border-color: var(--terra);
+    color: var(--terra);
+}
+
+.btn-borda {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    width: 100%;
+}
+
+.btn-borda:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* ========================================
+   5. BANNER PRINCIPAL
+======================================== */
+
+.hero {
+    position: relative;
+    min-height: 560px;
+    margin-top: -64px;
+    padding-top: 64px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(40, 22, 14, 0.55),
+            rgba(40, 22, 14, 0.7)
+        ),
+        linear-gradient(160deg, #a8663d, #3a2418);
+}
+
+/* Imagem de fundo do banner */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Camada escura sobre a imagem */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(40, 22, 14, 0.55);
+    z-index: 0;
+}
+
+/* Conteúdo acima da imagem */
+.hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero .btn-terra {
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   6. CARDS DE ESTATÍSTICAS
+======================================== */
+
+.stat {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(120, 60, 30, 0.08);
+    height: 100%;
+}
+
+.stat b {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.stat small {
+    color: #8a7a72;
+}
+
+/* ========================================
+   7. SEÇÕES DO SITE
+======================================== */
+
+.secao {
+    padding: 3.5rem 0;
+}
+
+.secao.alt {
+    background: var(--pessego);
+}
+
+.secao > .container > h2,
+section h2 {
+    color: var(--terra);
+}
+
+/* ========================================
+   8. CARDS E IMAGENS
+======================================== */
+
+.card {
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 12px rgba(120, 60, 30, 0.08);
+}
+
+.thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #e3d3c4;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.galeria {
+    border-radius: 0.75rem;
+    aspect-ratio: 3 / 2;
+}
+
+/* ========================================
+   9. MAPAS
+======================================== */
+
+.mapa {
+    object-fit: cover;
+    border-radius: 0.5rem;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: var(--terra);
+}
+
+/* ========================================
+   10. LINKS, ETIQUETAS E LISTAS
+======================================== */
+
+.mais {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--terra);
+}
+
+.mais:hover {
+    color: var(--terra-esc);
+}
+
+.tag {
+    background: var(--pessego);
+    color: var(--terra);
+    font-weight: 500;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.9rem 1.1rem;
+    border-radius: 0.5rem;
+    color: var(--tinta);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   11. BANNER DE DETALHES
+======================================== */
+
+.hero-det {
+    min-height: 340px;
+    margin-top: -64px;
+    padding-top: 64px;
+
+    background:
+        linear-gradient(
+            transparent 10%,
+            rgba(40, 22, 14, 0.88)
+        ),
+        var(--foto, none) center / cover,
+        linear-gradient(160deg, #a8663d, #3a2418);
+}
+
+/* ========================================
+   12. RODAPÉ
+======================================== */
+
+footer {
+    background: var(--pessego);
+}
+
+footer a {
+    color: var(--terra);
+    text-decoration: underline;
+}
